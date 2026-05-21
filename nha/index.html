@@ -1303,58 +1303,57 @@
 
   // Danh sách câu hỏi - câu trả lời
   const faqData = [
-    {
-      keywords: ["gia", "bao nhieu", "gia tien", "bao gia", "mua"],
-      answer:
-        "Giá sản phẩm có thể thay đổi theo số lượng và thời điểm đặt hàng. Bạn vui lòng liên hệ/Zalo: 0987 838 158 hoặc 0979 002 838 để được báo giá nhanh nhất."
-    },
-    {
-      keywords: ["dia chi", "o dau", "cho nao", "vi tri", "dong tien hai"],
-      answer:
-        "Địa chỉ của chúng tôi: Đông Tiền Hải, tỉnh Hưng Yên. Bạn có thể liên hệ trước qua số 0987 838 158 - 0979 002 838 để được tư vấn và đặt hàng."
-    },
-    {
-      keywords: ["so dien thoai", "sdt", "zalo", "lien he", "goi"],
-      answer:
-        "Bạn có thể liên hệ qua số điện thoại/Zalo: 0987 838 158 hoặc 0979 002 838. Chúng tôi nhận tư vấn và đặt hàng sỉ, lẻ."
-    },
-    {
-      keywords: ["ban si", "si", "ban le", "le", "so luong lon", "dai ly"],
-      answer:
-        "Chúng tôi nhận bán sỉ và lẻ trứng vịt biển, vịt biển Đông Xuyên. Khách đặt số lượng lớn, quán ăn, nhà hàng hoặc đại lý có thể liên hệ trực tiếp để được tư vấn."
-    },
-    {
-      keywords: ["giao hang", "ship", "van chuyen", "gui hang"],
-      answer:
-        "Có hỗ trợ giao hàng theo khu vực và số lượng đặt. Bạn vui lòng liên hệ trước qua 0987 838 158 hoặc 0979 002 838 để được tư vấn cụ thể."
-    },
-    {
-      keywords: ["trung", "trung vit", "trung vit bien", "long do", "beo"],
-      answer:
-        "Trứng vịt biển Đông Xuyên nổi bật với lòng đỏ béo thơm, vỏ chắc, phù hợp để luộc, rán, kho, làm bánh hoặc cung cấp cho quán ăn, nhà hàng."
-    },
-    {
-      keywords: ["vit", "vit bien", "thit vit", "vit dong xuyen"],
-      answer:
-        "Vịt biển Đông Xuyên có thịt chắc, mềm, thơm và đậm vị quê biển. Sản phẩm phù hợp cho bữa ăn gia đình, quán ăn, nhà hàng và các món đặc sản."
-    },
-    {
-      keywords: ["mon an", "che bien", "nau gi", "lam mon gi", "om sau", "nuong", "quay", "luoc"],
-      answer:
-        "Vịt biển Đông Xuyên có thể chế biến thành nhiều món ngon như vịt luộc, vịt nướng, vịt quay, vịt om sấu, vịt rang muối. Trứng vịt biển có thể luộc, rán, kho hoặc làm bánh."
-    },
-    {
-      keywords: ["nguon goc", "chat luong", "sach", "an toan", "tuoi"],
-      answer:
-        "Sản phẩm được chọn lọc kỹ, hướng tới sự tươi ngon, rõ nguồn gốc và phù hợp với nhu cầu sử dụng hằng ngày của gia đình, quán ăn và nhà hàng."
-    },
-    {
-      keywords: ["facebook", "fanpage"],
-      answer:
-        "Facebook hiện để tên: Trứng vịt biển Đông Xuyên. Bạn cũng có thể liên hệ nhanh qua Zalo/số điện thoại: 0987 838 158 - 0979 002 838."
-    }
-  ];
-
+  {
+    keywords: ["giao hang", "co giao hang", "ship", "van chuyen", "gui hang", "giao den nha"],
+    answer:
+      "Có hỗ trợ giao hàng theo khu vực và số lượng đặt. Bạn vui lòng liên hệ trước qua 0987 838 158 hoặc 0979 002 838 để được tư vấn cụ thể về thời gian và chi phí giao hàng."
+  },
+  {
+    keywords: ["bao nhieu", "gia tien", "bao gia", "gia san pham", "gia trung", "gia vit", "mua bao nhieu"],
+    answer:
+      "Giá sản phẩm có thể thay đổi theo số lượng và thời điểm đặt hàng. Bạn vui lòng liên hệ/Zalo: 0987 838 158 hoặc 0979 002 838 để được báo giá nhanh nhất."
+  },
+  {
+    keywords: ["dia chi", "o dau", "cho nao", "vi tri", "dong tien hai"],
+    answer:
+      "Địa chỉ của chúng tôi: Đông Tiền Hải, tỉnh Hưng Yên. Bạn có thể liên hệ trước qua số 0987 838 158 - 0979 002 838 để được tư vấn và đặt hàng."
+  },
+  {
+    keywords: ["so dien thoai", "sdt", "zalo", "lien he", "goi"],
+    answer:
+      "Bạn có thể liên hệ qua số điện thoại/Zalo: 0987 838 158 hoặc 0979 002 838. Chúng tôi nhận tư vấn và đặt hàng sỉ, lẻ."
+  },
+  {
+    keywords: ["ban si", "si", "ban le", "le", "so luong lon", "dai ly"],
+    answer:
+      "Chúng tôi nhận bán sỉ và lẻ trứng vịt biển, vịt biển Đông Xuyên. Khách đặt số lượng lớn, quán ăn, nhà hàng hoặc đại lý có thể liên hệ trực tiếp để được tư vấn."
+  },
+  {
+    keywords: ["trung", "trung vit", "trung vit bien", "long do", "beo"],
+    answer:
+      "Trứng vịt biển Đông Xuyên nổi bật với lòng đỏ béo thơm, vỏ chắc, phù hợp để luộc, rán, kho, làm bánh hoặc cung cấp cho quán ăn, nhà hàng."
+  },
+  {
+    keywords: ["vit", "vit bien", "thit vit", "vit dong xuyen"],
+    answer:
+      "Vịt biển Đông Xuyên có thịt chắc, mềm, thơm và đậm vị quê biển. Sản phẩm phù hợp cho bữa ăn gia đình, quán ăn, nhà hàng và các món đặc sản."
+  },
+  {
+    keywords: ["mon an", "che bien", "nau gi", "lam mon gi", "om sau", "nuong", "quay", "luoc"],
+    answer:
+      "Vịt biển Đông Xuyên có thể chế biến thành nhiều món ngon như vịt luộc, vịt nướng, vịt quay, vịt om sấu, vịt rang muối. Trứng vịt biển có thể luộc, rán, kho hoặc làm bánh."
+  },
+  {
+    keywords: ["nguon goc", "chat luong", "sach", "an toan", "tuoi"],
+    answer:
+      "Sản phẩm được chọn lọc kỹ, hướng tới sự tươi ngon, rõ nguồn gốc và phù hợp với nhu cầu sử dụng hằng ngày của gia đình, quán ăn và nhà hàng."
+  },
+  {
+    keywords: ["facebook", "fanpage"],
+    answer:
+      "Facebook hiện để tên: Trứng vịt biển Đông Xuyên. Bạn cũng có thể liên hệ nhanh qua Zalo/số điện thoại: 0987 838 158 - 0979 002 838."
+  }
+];
   function getBotAnswer(userQuestion) {
     const question = cleanText(userQuestion);
 
