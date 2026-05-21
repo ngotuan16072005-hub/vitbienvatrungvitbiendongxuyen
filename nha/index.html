@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO: giúp Google hiểu nội dung trang web -->
+  <meta name="description" content="Trứng vịt biển và Vịt biển Đông Xuyên tại Đông Tiền Hải, tỉnh Hưng Yên. Sản phẩm tươi ngon, nhận đặt hàng sỉ và lẻ." />
+  <meta name="keywords" content="trứng vịt biển, vịt biển Đông Xuyên, trứng vịt biển Đông Xuyên, vịt biển Hưng Yên, đặc sản Đông Tiền Hải, trứng vịt ngon, vịt biển ngon" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Trứng vịt biển & Vịt biển Đông Xuyên" />
+
+  <!-- Hiển thị đẹp hơn khi chia sẻ link lên Facebook/Zalo -->
+  <meta property="og:title" content="Trứng vịt biển & Vịt biển Đông Xuyên" />
+  <meta property="og:description" content="Đặc sản quê biển Đông Xuyên: trứng vịt biển béo thơm, vịt biển chắc thịt, nhận đặt hàng sỉ và lẻ." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="vi_VN" />
+
+  <!-- Dữ liệu doanh nghiệp địa phương cho công cụ tìm kiếm -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Trứng vịt biển & Vịt biển Đông Xuyên",
+    "description": "Cung cấp trứng vịt biển và vịt biển Đông Xuyên tại Đông Tiền Hải, tỉnh Hưng Yên. Nhận đặt hàng sỉ và lẻ.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Đông Tiền Hải",
+      "addressRegion": "Hưng Yên",
+      "addressCountry": "VN"
+    },
+    "telephone": ["0987838158", "0979002838"],
+    "areaServed": "Việt Nam"
+  }
+  </script>
+  <title>Trứng vịt biển & Vịt biển Đông Xuyên</title>
+  <meta name="google-site-verification" content="vAzqv31Japy9cVLPFGuov7u0Te4n2eVk_ibHedOMf_U" />
+
+  <style>
+    /* =========================
+       PHẦN DỄ CHỈNH SỬA
+       Đổi màu, địa chỉ, số điện thoại ở các phần bên dưới nếu cần
+    ========================== */
+    :root {
+      --mau-chinh: #0f766e;
+      --mau-chinh-dam: #064e3b;
+      --mau-phu: #f59e0b;
+      --mau-nen: #fffaf0;
+      --mau-chu: #1f2937;
+      --mau-trang: #ffffff;
+      --mau-nhat: #ecfdf5;
+      --do-bo-goc: 22px;
+      --bong-do: 0 18px 45px rgba(15, 118, 110, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--mau-nen);
+      color: var(--mau-chu);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 250, 240, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15, 118, 110, 0.12);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--mau-chinh);
+      font-size: 20px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--mau-chinh), #14b8a6);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      box-shadow: var(--bong-do);
+    }
+
+    .menu {
+      display: flex;
+      gap: 24px;
+      font-weight: 700;
+      color: #14532d;
+    }
+
+    .menu a:hover {
+      color: var(--mau-chinh);
+    }
+
+    .hero {
+      padding: 72px 0 54px;
+      background:
+        radial-gradient(circle at top left, rgba(20, 184, 166, 0.2), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.22), transparent 34%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--mau-nhat);
+      color: var(--mau-chinh);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.08;
+      color: var(--mau-chinh-dam);
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      color: var(--mau-phu);
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 650px;
+      margin-bottom: 26px;
+      color: #374151;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--mau-chinh);
+      color: var(--mau-trang);
+      box-shadow: var(--bong-do);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #0d9488;
+    }
+
+    .btn-outline {
+      border: 2px solid var(--mau-chinh);
+      color: var(--mau-chinh);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      background: var(--mau-nhat);
+    }
+
+    .hero-card {
+      background: white;
+      padding: 22px;
+      border-radius: 30px;
+      box-shadow: var(--bong-do);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-visual {
+      min-height: 380px;
+      border-radius: 24px;
+      background:
+        linear-gradient(160deg, rgba(15, 118, 110, 0.88), rgba(20, 184, 166, 0.72)),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 26px;
+      color: white;
+    }
+
+    .visual-box {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .visual-box h3 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title .small {
+      color: var(--mau-phu);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      color: var(--mau-chinh-dam);
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      max-width: 720px;
+      margin: auto;
+      color: #4b5563;
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    .card {
+      background: white;
+      border-radius: var(--do-bo-goc);
+      padding: 30px;
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(15, 118, 110, 0.1);
+    }
+
+    .card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: var(--mau-nhat);
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: var(--mau-chinh-dam);
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .card ul {
+      margin-top: 14px;
+      padding-left: 20px;
+    }
+
+    .card li {
+      margin-bottom: 8px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: white;
+      border-radius: 20px;
+      padding: 24px 18px;
+      text-align: center;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+    }
+
+    .feature .emoji {
+      font-size: 34px;
+    }
+
+    .feature strong {
+      display: block;
+      color: var(--mau-chinh);
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    .story {
+      background: var(--mau-chinh-dam);
+      color: white;
+      border-radius: 34px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 38px;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .story h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .story p {
+      color: #d1fae5;
+      margin-bottom: 14px;
+    }
+
+    .story-image {
+      min-height: 330px;
+      border-radius: 28px;
+      background:
+        linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.2)),
+        url("https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=900&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .dishes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .dish {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .dish-img {
+      height: 170px;
+      background: linear-gradient(135deg, #fef3c7, #ccfbf1);
+      display: grid;
+      place-items: center;
+      font-size: 64px;
+    }
+
+    .dish-content {
+      padding: 20px;
+    }
+
+    .dish-content h3 {
+      color: var(--mau-chinh-dam);
+      margin-bottom: 8px;
+    }
+
+    .order-box {
+      background: linear-gradient(135deg, var(--mau-chinh), #14b8a6);
+      color: white;
+      border-radius: 34px;
+      padding: 46px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      box-shadow: var(--bong-do);
+    }
+
+    .order-box h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      margin-bottom: 10px;
+    }
+
+    .order-box p {
+      color: #ecfdf5;
+      font-size: 18px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+      font-weight: 700;
+    }
+
+    .contact-list a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer {
+      background: #032e29;
+      color: white;
+      padding: 36px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #a7f3d0;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 850px) {
+      .menu {
+        display: none;
+      }
+
+      .hero-grid,
+      .story,
+      .order-box {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .features,
+      .dishes {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
+
+      .story,
+      .order-box {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- THANH MENU -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#gioi-thieu" class="logo">
+        <span class="logo-icon">🥚</span>
+        <span>Trứng Vịt Biển Đông Xuyên Và Vịt Biển Đông Xuyên</span>
+      </a>
+
+      <nav class="menu">
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#san-pham">Sản phẩm</a>
+        <a href="#dac-diem">Điểm nổi bật</a>
+        <a href="#lien-he">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PHẦN ĐẦU TRANG -->
+  <section class="hero" id="gioi-thieu">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">🌊 Đặc sản vùng biển Đông Xuyên</div>
+        <h1>Trứng vịt biển Đông Xuyên & <span>Vịt biển Đông Xuyên</span></h1>
+        <p>
+          Sản phẩm tươi ngon, đậm vị quê biển, phù hợp cho bữa ăn gia đình,
+          nhà hàng, quán ăn và các cơ sở kinh doanh thực phẩm sạch.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#lien-he">Đặt hàng ngay</a>
+          <a class="btn btn-outline" href="#san-pham">Xem sản phẩm</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="product-visual">
+          <div class="visual-box">
+            <h3>Tươi ngon mỗi ngày</h3>
+            <p>Trứng béo thơm, vịt chắc thịt, nguồn gốc rõ ràng.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN SẢN PHẨM -->
+  <section class="section" id="san-pham">
+    <div class="container">
+      <div class="section-title">
+        <div class="small">Sản phẩm chính</div>
+        <h2>Chất lượng từ vùng nuôi ven biển</h2>
+        <p>
+          Trứng vịt biển và vịt biển Đông Xuyên được chọn lọc kỹ, hướng tới sự
+          tươi ngon, an toàn và phù hợp với nhu cầu sử dụng hằng ngày.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🥚</div>
+          <h3>Trứng vịt biển</h3>
+          <p>
+            Trứng có lòng đỏ béo, thơm, vỏ chắc, dễ bảo quản và chế biến thành
+            nhiều món ăn ngon trong bữa cơm gia đình.
+          </p>
+          <ul>
+            <li>Lòng đỏ to, vị béo tự nhiên</li>
+            <li>Phù hợp luộc, rán, kho, làm bánh</li>
+            <li>Có thể bán lẻ hoặc bán theo khay</li>
+            <li>Phù hợp cung cấp cho quán ăn, nhà hàng</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🦆</div>
+          <h3>Vịt biển Đông Xuyên</h3>
+          <p>
+            Vịt biển có thịt chắc, mềm, thơm, thích hợp chế biến nhiều món ăn
+            truyền thống và món đặc sản quê biển.
+          </p>
+          <ul>
+            <li>Thịt chắc, thơm, đậm vị</li>
+            <li>Phù hợp luộc, quay, nướng, om sấu</li>
+            <li>Nguồn hàng theo số lượng đặt trước</li>
+            <li>Phục vụ gia đình, nhà hàng, bếp ăn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN ĐIỂM NỔI BẬT -->
+  <section class="section" id="dac-diem">
+    <div class="container">
+      <div class="section-title">
+        <div class="small">Cam kết chất lượng</div>
+        <h2>Vì sao nên chọn sản phẩm Đông Xuyên?</h2>
+        <p>
+          Trứng vịt biển Đông Xuyên nổi bật với lòng đỏ béo thơm, vỏ chắc,
+          phù hợp cho bữa ăn gia đình, quán ăn và nhà hàng. Vịt biển Đông Xuyên
+          gây ấn tượng bởi phần thịt chắc, mềm, đậm vị quê biển, dễ chế biến thành
+          nhiều món ngon như vịt luộc, vịt nướng, vịt quay hay vịt om sấu. Hai sản phẩm
+          đều được chọn lọc kỹ, mang đến sự tươi ngon và an tâm cho khách hàng.
+        </p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="emoji">✅</div>
+          <strong>Nguồn gốc rõ ràng</strong>
+          <p>Sản phẩm từ vùng nuôi địa phương, dễ kiểm soát chất lượng.</p>
+        </div>
+
+        <div class="feature">
+          <div class="emoji">🌿</div>
+          <strong>Tươi ngon tự nhiên</strong>
+          <p>Chọn lọc kỹ trước khi giao đến tay khách hàng.</p>
+        </div>
+
+        <div class="feature">
+          <div class="emoji">🍽️</div>
+          <strong>Dễ chế biến</strong>
+          <p>Phù hợp với nhiều món ăn gia đình và nhà hàng.</p>
+        </div>
+
+        <div class="feature">
+          <div class="emoji">🚚</div>
+          <strong>Nhận sỉ & lẻ</strong>
+          <p>Hỗ trợ đặt hàng theo nhu cầu sử dụng hoặc kinh doanh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN CÂU CHUYỆN SẢN PHẨM -->
+  <section class="section">
+    <div class="container">
+      <div class="story">
+        <div>
+          <h2>Đậm đà hương vị quê biển</h2>
+          <p>
+            Vịt biển và trứng vịt biển Đông Xuyên không chỉ là thực phẩm quen
+            thuộc mà còn là sản phẩm mang nét đặc trưng của vùng quê ven biển.
+          </p>
+          <p>
+            Mỗi sản phẩm đều hướng tới sự tươi ngon, gần gũi và an tâm cho người
+            tiêu dùng, góp phần quảng bá giá trị nông sản địa phương.
+          </p>
+          <a class="btn btn-outline" href="#lien-he">Liên hệ tư vấn</a>
+        </div>
+
+        <div class="story-image" aria-label="Hình ảnh minh họa vùng quê ven biển"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN GỢI Ý MÓN ĂN -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <div class="small">Gợi ý chế biến</div>
+        <h2>Ngon hơn trong từng bữa ăn</h2>
+      </div>
+
+      <div class="dishes">
+        <div class="dish">
+          <div class="dish-img">🥚</div>
+          <div class="dish-content">
+            <h3>Trứng vịt luộc</h3>
+            <p>Món ăn đơn giản, giữ trọn vị béo thơm tự nhiên của trứng.</p>
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-img">🍲</div>
+          <div class="dish-content">
+            <h3>Vịt om sấu</h3>
+            <p>Thịt vịt mềm, đậm đà, phù hợp cho bữa cơm gia đình.</p>
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-img">🔥</div>
+          <div class="dish-content">
+            <h3>Vịt nướng</h3>
+            <p>Hương vị thơm ngon, hấp dẫn, phù hợp cho nhà hàng và quán ăn.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN LIÊN HỆ -->
+  <section class="section" id="lien-he">
+    <div class="container">
+      <div class="order-box">
+        <div>
+          <h2>Đặt hàng ngay hôm nay</h2>
+          <p>
+            Nhận cung cấp trứng vịt biển và vịt biển Đông Xuyên theo nhu cầu
+            gia đình, quán ăn, nhà hàng và đại lý.
+          </p>
+
+          <div class="contact-list">
+            <div>📍 Địa chỉ: Đông Tiền Hải, tỉnh Hưng Yên</div>
+            <div>📞 Số điện thoại/Zalo: <a href="tel:0987838158">0987 838 158</a> - <a href="tel:0979002838">0979 002 838</a></div>
+            <div>📘 Facebook: Trứng vịt biển Đông Xuyên</div>
+          </div>
+        </div>
+
+        <a class="btn btn-outline" href="tel:0987838158">Gọi ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <strong>Trứng vịt biển & Vịt biển Đông Xuyên</strong>
+      <p>Đặc sản quê biển – Tươi ngon – Chất lượng – Đậm đà.</p>
+      <p>© <span id="year"></span> Đông Xuyên. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Tự động cập nhật năm ở cuối trang
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
