@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://vitbienvatrungvitbiendongxuyen.netlify.app/sitemap.xml
