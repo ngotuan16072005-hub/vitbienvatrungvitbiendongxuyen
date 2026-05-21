@@ -1229,7 +1229,50 @@
       </div>
     </div>
   </section>
+<!-- CHATBOT HỎI ĐÁP TỰ ĐỘNG -->
+<button class="chatbot-toggle" onclick="toggleChatbot()" aria-label="Mở trợ lý hỏi đáp">
+  💬
+</button>
 
+<div class="chatbot-box" id="chatbotBox">
+  <div class="chatbot-header">
+    <div class="chatbot-title">
+      <div class="chatbot-avatar">🦆</div>
+      <div>
+        <strong>Trợ lý Đông Xuyên</strong>
+        <span>Hỏi đáp về trứng vịt biển & vịt biển</span>
+      </div>
+    </div>
+
+    <button class="chatbot-close" onclick="toggleChatbot()" aria-label="Đóng chatbot">
+      ×
+    </button>
+  </div>
+
+  <div class="chatbot-messages" id="chatbotMessages">
+    <div class="chat-message bot">
+      Xin chào! Tôi là trợ lý tư vấn của Trứng vịt biển & Vịt biển Đông Xuyên.
+      Bạn cần hỏi về giá, đặt hàng, địa chỉ, giao hàng hay sản phẩm?
+    </div>
+  </div>
+
+  <div class="chatbot-suggestions">
+    <button onclick="quickAsk('Giá bao nhiêu?')">Giá bao nhiêu?</button>
+    <button onclick="quickAsk('Có bán sỉ không?')">Bán sỉ không?</button>
+    <button onclick="quickAsk('Địa chỉ ở đâu?')">Địa chỉ?</button>
+    <button onclick="quickAsk('Có giao hàng không?')">Giao hàng?</button>
+  </div>
+
+  <form class="chatbot-input" onsubmit="sendChatMessage(event)">
+    <input
+      type="text"
+      id="chatbotInput"
+      placeholder="Nhập câu hỏi của bạn..."
+      autocomplete="off"
+    />
+    <button type="submit">Gửi</button>
+  </form>
+</div>
   <footer class="footer">
     <div class="container">
       <strong>Trứng vịt biển & Vịt biển Đông Xuyên</strong>
@@ -1239,8 +1282,133 @@
   </footer>
 
   <script>
-    // Tự động cập nhật năm ở cuối trang
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+  // Tự động cập nhật năm ở cuối trang
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mở / đóng chatbot
+  function toggleChatbot() {
+    const chatbotBox = document.getElementById("chatbotBox");
+    chatbotBox.classList.toggle("active");
+  }
+
+  // Chuẩn hóa chữ để người dùng gõ có dấu/không dấu đều nhận được
+  function cleanText(text) {
+    return text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/đ/g, "d")
+      .replace(/Đ/g, "d");
+  }
+
+  // Danh sách câu hỏi - câu trả lời
+  const faqData = [
+    {
+      keywords: ["gia", "bao nhieu", "gia tien", "bao gia", "mua"],
+      answer:
+        "Giá sản phẩm có thể thay đổi theo số lượng và thời điểm đặt hàng. Bạn vui lòng liên hệ/Zalo: 0987 838 158 hoặc 0979 002 838 để được báo giá nhanh nhất."
+    },
+    {
+      keywords: ["dia chi", "o dau", "cho nao", "vi tri", "dong tien hai"],
+      answer:
+        "Địa chỉ của chúng tôi: Đông Tiền Hải, tỉnh Hưng Yên. Bạn có thể liên hệ trước qua số 0987 838 158 - 0979 002 838 để được tư vấn và đặt hàng."
+    },
+    {
+      keywords: ["so dien thoai", "sdt", "zalo", "lien he", "goi"],
+      answer:
+        "Bạn có thể liên hệ qua số điện thoại/Zalo: 0987 838 158 hoặc 0979 002 838. Chúng tôi nhận tư vấn và đặt hàng sỉ, lẻ."
+    },
+    {
+      keywords: ["ban si", "si", "ban le", "le", "so luong lon", "dai ly"],
+      answer:
+        "Chúng tôi nhận bán sỉ và lẻ trứng vịt biển, vịt biển Đông Xuyên. Khách đặt số lượng lớn, quán ăn, nhà hàng hoặc đại lý có thể liên hệ trực tiếp để được tư vấn."
+    },
+    {
+      keywords: ["giao hang", "ship", "van chuyen", "gui hang"],
+      answer:
+        "Có hỗ trợ giao hàng theo khu vực và số lượng đặt. Bạn vui lòng liên hệ trước qua 0987 838 158 hoặc 0979 002 838 để được tư vấn cụ thể."
+    },
+    {
+      keywords: ["trung", "trung vit", "trung vit bien", "long do", "beo"],
+      answer:
+        "Trứng vịt biển Đông Xuyên nổi bật với lòng đỏ béo thơm, vỏ chắc, phù hợp để luộc, rán, kho, làm bánh hoặc cung cấp cho quán ăn, nhà hàng."
+    },
+    {
+      keywords: ["vit", "vit bien", "thit vit", "vit dong xuyen"],
+      answer:
+        "Vịt biển Đông Xuyên có thịt chắc, mềm, thơm và đậm vị quê biển. Sản phẩm phù hợp cho bữa ăn gia đình, quán ăn, nhà hàng và các món đặc sản."
+    },
+    {
+      keywords: ["mon an", "che bien", "nau gi", "lam mon gi", "om sau", "nuong", "quay", "luoc"],
+      answer:
+        "Vịt biển Đông Xuyên có thể chế biến thành nhiều món ngon như vịt luộc, vịt nướng, vịt quay, vịt om sấu, vịt rang muối. Trứng vịt biển có thể luộc, rán, kho hoặc làm bánh."
+    },
+    {
+      keywords: ["nguon goc", "chat luong", "sach", "an toan", "tuoi"],
+      answer:
+        "Sản phẩm được chọn lọc kỹ, hướng tới sự tươi ngon, rõ nguồn gốc và phù hợp với nhu cầu sử dụng hằng ngày của gia đình, quán ăn và nhà hàng."
+    },
+    {
+      keywords: ["facebook", "fanpage"],
+      answer:
+        "Facebook hiện để tên: Trứng vịt biển Đông Xuyên. Bạn cũng có thể liên hệ nhanh qua Zalo/số điện thoại: 0987 838 158 - 0979 002 838."
+    }
+  ];
+
+  function getBotAnswer(userQuestion) {
+    const question = cleanText(userQuestion);
+
+    for (const item of faqData) {
+      for (const keyword of item.keywords) {
+        if (question.includes(keyword)) {
+          return item.answer;
+        }
+      }
+    }
+
+    return "Tôi chưa hiểu rõ câu hỏi của bạn. Bạn có thể hỏi về giá, đặt hàng, địa chỉ, giao hàng, trứng vịt biển hoặc vịt biển Đông Xuyên. Hoặc liên hệ trực tiếp: 0987 838 158 - 0979 002 838.";
+  }
+
+  function addMessage(message, sender) {
+    const messagesBox = document.getElementById("chatbotMessages");
+    const messageDiv = document.createElement("div");
+
+    messageDiv.className = "chat-message " + sender;
+    messageDiv.textContent = message;
+
+    messagesBox.appendChild(messageDiv);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+  }
+
+  function sendChatMessage(event) {
+    event.preventDefault();
+
+    const input = document.getElementById("chatbotInput");
+    const userMessage = input.value.trim();
+
+    if (userMessage === "") return;
+
+    addMessage(userMessage, "user");
+    input.value = "";
+
+    setTimeout(function () {
+      const botAnswer = getBotAnswer(userMessage);
+      addMessage(botAnswer, "bot");
+    }, 500);
+  }
+
+  function quickAsk(question) {
+    const chatbotBox = document.getElementById("chatbotBox");
+
+    if (!chatbotBox.classList.contains("active")) {
+      chatbotBox.classList.add("active");
+    }
+
+    addMessage(question, "user");
+
+    setTimeout(function () {
+      const botAnswer = getBotAnswer(question);
+      addMessage(botAnswer, "bot");
+    }, 500);
+  }
+</script>
