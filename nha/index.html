@@ -1433,10 +1433,59 @@ body::before {
   object-fit: contain;
   display: block;
 }
+
+
+/* ===== DONGXUYENFARM PREMIUM REFRESH ===== */
+:root{--mau-chinh:#0b8b76;--mau-chinh-dam:#075b50;--mau-phu:#e4a72c;--mau-phu-dam:#a66b08;--mau-nen:#fffdf7;--mau-nhat:#eaf8f3;--do-bo-goc:26px;--bong-do:0 18px 50px rgba(7,91,80,.10);--bong-do-manh:0 28px 70px rgba(7,91,80,.18)}
+body{font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:-.12px}
+::selection{background:#c7f1e5;color:#064e3b}
+.reading-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#e4a72c,#0b8b76);z-index:1000;box-shadow:0 0 12px #0b8b7660}
+.navbar{background:rgba(255,255,255,.91);border-bottom-color:rgba(7,91,80,.10);box-shadow:0 8px 28px rgba(7,91,80,.07)}
+.nav-inner{min-height:82px}
+.logo{max-width:390px;font-size:15px;line-height:1.35}
+.logo-img{flex:0 0 auto;width:58px;height:58px;border-radius:18px}
+.menu{align-items:center;gap:3px;font-size:13px}
+.menu a{padding:10px 11px;white-space:nowrap}
+.menu .menu-order{color:#fff;background:linear-gradient(135deg,#0b8b76,#075b50);box-shadow:0 8px 18px #075b5028}
+.menu .menu-order:hover{background:#064e3b;color:white}
+.mobile-menu-toggle{display:none;border:1px solid #d5e9e2;background:white;color:#075b50;border-radius:13px;padding:10px 13px;font-size:22px;line-height:1;cursor:pointer}
+.hero{padding:90px 0 76px;background:radial-gradient(ellipse at 82% 22%,rgba(228,167,44,.15),transparent 32%),radial-gradient(ellipse at 12% 62%,rgba(11,139,118,.14),transparent 40%),linear-gradient(135deg,#fffdf7 0%,#f1fbf6 55%,#fff8e8 100%)}
+.hero h1{letter-spacing:-2.4px;font-weight:900}
+.hero p{line-height:1.8;color:#465b55}
+.badge{border-color:#cde6dc;box-shadow:0 8px 24px #075b5010}
+.btn{min-height:50px;box-shadow:0 10px 22px #075b5014}
+.btn-primary{background:linear-gradient(135deg,#0b8b76,#075b50)}
+.btn-primary:hover{filter:brightness(1.06)}
+.hero-card,.certificate-box,.story,.highlight-section,.order-box{border:1px solid rgba(255,255,255,.9);box-shadow:var(--bong-do-manh)}
+.section{scroll-margin-top:95px}
+.section-title h2{letter-spacing:-1.1px;font-weight:900}
+.section-title .small{letter-spacing:1.8px;text-transform:uppercase;font-size:12px;font-weight:900}
+.card,.feature,.dish,.gallery-main,.gallery-side-card{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.card:hover,.feature:hover,.dish:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(7,91,80,.13)}
+img{max-width:100%}
+.gallery-section img,.certificate-images img{transition:transform .5s ease,filter .35s ease}
+.gallery-section img:hover,.certificate-images img:hover{filter:saturate(1.06);transform:scale(1.015)}
+.contact-list>div{padding:10px 0;border-bottom:1px solid rgba(7,91,80,.09)}
+.contact-list>div:last-child{border-bottom:0}
+.contact-list a{font-weight:800;color:#075b50;text-decoration:underline;text-decoration-color:#b7d9cd;text-underline-offset:3px}
+.footer{background:linear-gradient(135deg,#063f38,#075b50 58%,#0b7665);color:#eaf8f3;padding:38px 0}
+.footer strong{font-size:18px}
+.footer p{color:#c7e4db}
+.chatbot-toggle{box-shadow:0 14px 30px rgba(7,91,80,.3);transition:transform .2s ease}
+.chatbot-toggle:hover{transform:translateY(-3px) scale(1.04)}
+.chatbot-box{box-shadow:0 24px 70px rgba(5,54,47,.24);border:1px solid #d8ebe4}
+.back-to-top{position:fixed;right:24px;bottom:92px;width:44px;height:44px;border:1px solid #cfe5dc;border-radius:15px;background:rgba(255,255,255,.94);color:#075b50;font-size:23px;font-weight:900;box-shadow:0 8px 24px #064e3b1c;cursor:pointer;z-index:20;opacity:0;pointer-events:none;transform:translateY(8px);transition:.25s}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+:focus-visible{outline:3px solid #e4a72c;outline-offset:3px;border-radius:8px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+@media(max-width:1000px){.nav-inner{flex-wrap:wrap}.mobile-menu-toggle{display:block}.menu{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;padding:8px 0 12px}.menu.open{display:flex}.menu a{padding:12px 14px;border-radius:12px}.menu .menu-order{text-align:center}.logo{max-width:calc(100% - 60px)}}
+@media(max-width:600px){.hero{padding:48px 0 44px}.hero h1{font-size:clamp(36px,10vw,52px);letter-spacing:-1.5px}.hero p{font-size:16px}.container{width:min(100% - 30px,1180px)}.logo{font-size:12px;gap:8px}.logo-img{width:46px;height:46px;border-radius:13px}.hero-card{padding:13px;border-radius:24px}.section{padding-top:48px!important;padding-bottom:48px!important}.section-title h2{font-size:clamp(27px,7vw,36px)}.back-to-top{right:16px;bottom:86px;width:40px;height:40px}}
+
 </style>
 </head>
 
 <body>
+<div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
 <header class="navbar">
     <div class="container nav-inner">
       <a href="#gioi-thieu" class="logo">
@@ -1444,13 +1493,15 @@ body::before {
         <span>HTX chăn nuôi tổng hợp - xã Đông Tiền Hải (Đông Xuyên cũ)</span>
       </a>
 
-      <nav class="menu">
+      <button class="mobile-menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false" onclick="toggleMobileMenu()">☰</button>
+      <nav class="menu" id="mainMenu" aria-label="Điều hướng chính">
         <a href="#gioi-thieu">Giới thiệu</a>
         <a href="#hinh-anh">Hình ảnh</a>
         <a href="#chung-nhan">Chứng nhận</a>
         <a href="#dac-diem">Điểm nổi bật</a>
         <a href="#san-pham">Sản phẩm</a>
         <a href="#lien-he">Liên hệ</a>
+        <a class="menu-order" href="#lien-he">Đặt hàng ↗</a>
       </nav>
     </div>
   </header>
@@ -1871,7 +1922,7 @@ body::before {
     </button>
   </div>
 
-  <div class="chatbot-messages" id="chatbotMessages">
+  <div class="chatbot-messages" id="chatbotMessages" aria-live="polite" aria-label="Tin nhắn trò chuyện">
     <div class="chat-message bot">
       Xin chào! Tôi là trợ lý tư vấn của Vịt biển Đông Xuyên & Trứng vịt biển Đông Xuyên.
       Bạn cần hỏi về giá, đặt hàng, địa chỉ, giao hàng hay sản phẩm?
@@ -1896,6 +1947,8 @@ body::before {
   </form>
 </div>
 
+<button class="back-to-top" id="backToTop" type="button" aria-label="Lên đầu trang" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
 <footer class="footer">
     <div class="container">
       <strong>Vịt biển Đông Xuyên & Trứng vịt biển Đông Xuyên</strong>
@@ -1907,6 +1960,36 @@ body::before {
 <script>
   // Tự động cập nhật năm ở cuối trang
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Menu danh cho dien thoai
+  function toggleMobileMenu() {
+    const menu = document.getElementById("mainMenu");
+    const button = document.querySelector(".mobile-menu-toggle");
+    const isOpen = menu.classList.toggle("open");
+    button.setAttribute("aria-expanded", String(isOpen));
+    button.setAttribute("aria-label", isOpen ? "Dong menu" : "Mo menu");
+    button.textContent = isOpen ? "×" : "☰";
+  }
+
+  // Thanh tien do doc trang va nut len dau trang
+  function updatePageChrome() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    document.getElementById("readingProgress").style.width = progress + "%";
+    document.getElementById("backToTop").classList.toggle("visible", window.scrollY > 420);
+  }
+  window.addEventListener("scroll", updatePageChrome, { passive: true });
+  updatePageChrome();
+  document.querySelectorAll("#mainMenu a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      const menu = document.getElementById("mainMenu");
+      const button = document.querySelector(".mobile-menu-toggle");
+      menu.classList.remove("open");
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", "Mo menu");
+      button.textContent = "☰";
+    });
+  });
 
   // Mở / đóng chatbot
   function toggleChatbot() {
